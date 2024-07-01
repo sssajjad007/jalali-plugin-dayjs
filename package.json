@@ -44,7 +44,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/sssajjad007/jalali-plugin-dayjs"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
