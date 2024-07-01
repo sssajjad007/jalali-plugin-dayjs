@@ -1,0 +1,63 @@
+{
+  "name": "jalali-plugin-dayjs",
+  "version": "1.0.0",
+  "description": "Persian (Jalali, Khorshidi) Plugin for Day.js",
+  "main": "dist/jalaliday.cjs.min.js",
+  "web": "dist/jalaliday.umd.min.js",
+  "module": "dist/jalaliday.esm.js",
+  "jsnext:main": "dist/jalaliday.esm.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "yarn build && jest",
+    "lint": "eslint src/* test/*",
+    "build": "bili",
+    "release": "standard-version $* && git push --follow-tags && npm publish",
+    "prepublishOnly": "npm run build"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "test"
+    ],
+    "testRegex": "test/(.*?/)?.*test.js$",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/jest.transform.js"
+    }
+  },
+  "keywords": [
+    "dayjs",
+    "date",
+    "time",
+    "immutable",
+    "moment",
+    "jalali"
+  ],
+  "author": "sssajjad007",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "bili": "^4.8.1",
+    "codecov": "^3.5.0",
+    "dayjs": "^1.11.11",
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.15.2",
+    "jest": "^24.9.0",
+    "mockdate": "^2.0.5",
+    "pre-commit": "^1.2.2",
+    "standard-version": "7.0.0"
+  }
+}
