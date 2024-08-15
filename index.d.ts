@@ -1,14 +1,20 @@
-import { PluginFunc, ConfigType } from 'dayjs';
+import { PluginFunc } from 'dayjs';
 
 declare const plugin: PluginFunc;
 export = plugin;
 
-type calendarType = 'jalali' | 'gregory';
+type CalendarType = 'jalali' | 'gregory';
 
 declare module 'dayjs' {
-  interface Dayjs {
-    calendar(calendarType: calendarType): Dayjs;
+  export function calendar(calendarType: CalendarType): Dayjs;
 
-    isJalali(): boolean;
+  export function isJalali(): boolean;
+
+  export interface FormatObject {
+    jalali?: boolean;
+  }
+
+  interface Dayjs {
+    calendar(calendarType: CalendarType): Dayjs;
   }
 }
