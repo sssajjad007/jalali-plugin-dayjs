@@ -4,9 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.1.4](https://github.com/sssajjad007/jalali-plugin-dayjs/compare/v1.1.3...v1.1.4) (2024-08-19)
 
-### [1.1.3](https://github.com/sssajjad007/jalali-plugin-dayjs/compare/v1.1.2...v1.1.3) (2024-08-19)
-
-
 ### Bug Fixes
 
 * typescript issue ([3931d59](https://github.com/sssajjad007/jalali-plugin-dayjs/commit/3931d59))
